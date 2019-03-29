@@ -12,7 +12,7 @@ import java.io.IOException;
  * 	三，写入数据
  * 	四，关闭资源
  * 
- * ---| Output 所有输出字节流的基类，父类，抽象类
+ * ---| OutputStream 所有输出字节流的基类，父类，抽象类
  * ------| FileOutputStream 文件输出字节流
  * FileOutputStream的注意事项：
  * 	一，写入数据到文件中时该文件可以不存在，因为FileOutputStream有创建文件的能力，由于有些文件夹底下
