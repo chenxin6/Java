@@ -5,7 +5,7 @@ package cn.edu.ustc.nsrl.a_thread;
  * Thread(String name); 初始化线程的名字，属于线程的一个有参数的构造方法
  * setName(String name); 修改线程的名字
  * getName(); 获取线程的名字
- * sleep(); static静态方法，通过Thread类名调用，这里需要处理一些异常，要求当前线程睡觉多少毫米
+ * sleep(); static静态方法，通过Thread类名调用，这里需要处理一些异常，要求当前线程睡觉多少毫秒
  * currentThread(); static静态方法，返回当前线程对象
  * getPriority(); 返回当前线程的优先级CPU执行的优先级，不是绝对的
  * setPriority(); 设置线程的优先级，线程的优先级返回是1～10，1最低
