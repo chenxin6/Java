@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContactList>
+	<contact id="1">
+		<name>卷福</name>
+		<gender>男</gender>
+		<tel>18812345678</tel>
+		<age>18</age>
+		<qq>12345</qq>
+		<email>12345@qq.com</email>
+	</contact>
+	<contact id="2">
+		<name>花生</name>
+		<gender>男</gender>
+		<tel>16612345678</tel>
+		<age>17</age>
+		<qq>54321</qq>
+		<email>54321@qq.com</email>
+	</contact>
+</ContactList>
