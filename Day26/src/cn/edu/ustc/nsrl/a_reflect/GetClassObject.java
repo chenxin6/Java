@@ -27,6 +27,7 @@ package cn.edu.ustc.nsrl.a_reflect;
  * 
  * Method常用方法：
  * Method[] getMethods(); 获取当前类里面所有的public修饰的成员方法，这里会显示父类继承而来的public方法
+ * 							注意！父类的private方法虽然能继承但没有使用权，所以这里不能获得这些方法
  * Method[] getDeclaredMethods(); 获取当前类里面的所有方法，包括private修饰的方法，
  * 									但是会过滤父类继承而来的方法
  * Method getMethod(String name, Class<?>... parameterTypes); 根据方法的名字和对应的
@@ -37,7 +38,8 @@ package cn.edu.ustc.nsrl.a_reflect;
  * 										第二个参数是执行该方法需要的参数列表
  * 
  * Field常用方法：
- * Field[] getFields(); 获取所有的用public修饰的成员变量
+ * Field[] getFields(); 获取所有的用public修饰的成员变量，这里会显示父类继承而来的public修饰的成员变量
+ * 						注意！父类的private成员变量虽然能继承但没有使用权，所以这里不能获得这些成员变量
  * Field[] getDeclaredFields(); 获取所有成员变量，包括用private修饰的成员变量
  * Field getField(String name); 根据成员变量的名字获取对应的成员变量
  * Field getDeclaredField(String name); 根据成员变量的名字获取包括private修饰在内的成员变量
