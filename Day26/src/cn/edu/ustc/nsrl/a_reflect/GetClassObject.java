@@ -23,28 +23,27 @@ package cn.edu.ustc.nsrl.a_reflect;
  * Constructor getConstructor(Class<?>... parameterTypes); 根据所需参数不同，获取指定的构造方法对象
  * Constructor getDeclaredConstructor(Class<?>... parameterTypes); 跟上面相同但可以获得私有化方法
  * Object newInstance(Object ... initargs); 给予确定的参数，通过反射调用构造方法，
- * 											这里的参数列表是一个不定参数列表
+ * 这里的参数列表是一个不定参数列表
  * 
  * Method常用方法：
  * Method[] getMethods(); 获取当前类里面所有的public修饰的成员方法，这里会显示父类继承而来的public方法
- * 							注意！父类的private方法虽然能继承但没有使用权，所以这里不能获得这些方法
+ * 注意！父类的private方法虽然能继承但没有使用权，所以这里不能获得这些方法
  * Method[] getDeclaredMethods(); 获取当前类里面的所有方法，包括private修饰的方法，
- * 									但是会过滤父类继承而来的方法
+ * 但是会过滤父类继承而来的方法
  * Method getMethod(String name, Class<?>... parameterTypes); 根据方法的名字和对应的
- * 																参数列表获取指定方法
+ * 参数列表获取指定方法
  * Method getDeclaredMethod(String name, Class<?>... parameterTypes); 根据方法的名字和对应的
- * 												参数列表获取指定方法，可以获取private修饰的方法
+ * 参数列表获取指定方法，可以获取private修饰的方法
  * invoke(Object obj, Object... args); 执行成员方法的函数，第一个参数是执行该方法的类对象，
- * 										第二个参数是执行该方法需要的参数列表
+ * 第二个参数是执行该方法需要的参数列表
  * 
  * Field常用方法：
  * Field[] getFields(); 获取所有的用public修饰的成员变量，这里会显示父类继承而来的public修饰的成员变量
- * 						注意！父类的private成员变量虽然能继承但没有使用权，所以这里不能获得这些成员变量
+ * 注意！父类的private成员变量虽然能继承但没有使用权，所以这里不能获得这些成员变量
  * Field[] getDeclaredFields(); 获取所有成员变量，包括用private修饰的成员变量
  * Field getField(String name); 根据成员变量的名字获取对应的成员变量
  * Field getDeclaredField(String name); 根据成员变量的名字获取包括private修饰在内的成员变量
- * set(Object obj, Object value); 设置成员变量的数值，第一个参数是调用该成员变量的对象，
- * 									第二个参数是赋予的数值
+ * set(Object obj, Object value); 设置成员变量的数值，第一个参数是调用该成员变量的对象，第二个参数是赋予的数值
  * 
  * 暴力反射赋予权限的函数
  * setAccessible(boolean flag)
