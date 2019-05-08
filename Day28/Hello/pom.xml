@@ -3,17 +3,32 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
  
+ 	<!-- 删除与父工程重复的部分
     <groupId>cn.edu.ustc.nsrl.maven</groupId>
+ 	 -->
     <artifactId>Hello</artifactId>
+	<!-- 删除与父工程重复的部分
     <version>0.0.1-SNAPSHOT</version>
+	 -->
  
     <name>Hello</name>
+ 
+ 	<!-- 子工程中声明父工程 -->
+ 	<parent>
+		<groupId>cn.edu.ustc.nsrl.maven</groupId>
+		<artifactId>Parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<!-- 以当前文件为基准的父工程pom.xml文件的相对路径 -->
+		<relativePath>../Parent/pom.xml</relativePath>
+ 	</parent>
  
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
+            <!-- 父工程中已经管理好了，如果一样可以删除，如果要跟父工程不一样则可以保留
             <version>4.0</version>
+             -->
             <scope>test</scope>
         </dependency>
     </dependencies>
